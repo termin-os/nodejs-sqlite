@@ -87,3 +87,16 @@ CREATE TABLE "main"."transactions" (
 
 --// if saldo_active = 1 then:
 --// its converted and not more used, beacuse not existing, but for show, the history of changes, and leave the parent_id connection
+
+CREATE TABLE "main"."transaction" (
+   "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+   "sender_user_id" INTEGER NOT NULL,
+   "recipient_user_id" INTEGER NOT NULL,
+
+   "sender_account_id" INTEGER NOT NULL,
+   "recipient_account_id" INTEGER NOT NULL,
+
+   "calculation_id" INTEGER NOT NULL,
+   "description" TEXT NOT NULL
+);

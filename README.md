@@ -12,3 +12,6 @@
 + example website
 + python, fastapi, sqlite implementation
 
+## Examples
++ tool to test queries
+https://www.sqlitetutorial.net/sqlite-primary-key/
