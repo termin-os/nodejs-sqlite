@@ -22,11 +22,12 @@ name: godzina
 CREATE TABLE "main"."units" (
     "unit_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     name: workday
-    basic_factor: 8
-    basic_name: day
-    basic_value: hour
-
+    multiplier: 8
+    basic_unit: hour
 );
+
+factor, multiplier
+Multiply by conversion ratio
 
 CREATE TABLE "main"."units" (
     "unit_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
