@@ -100,6 +100,7 @@ grid
 -- siatka punktow
 CREATE TABLE "main"."timepoints" (
    "timepoint_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+   "parent_timepoint_id" INTEGER NOT NULL,
 -- nazwa, moze dotyczyc kolejnego dnia w roku,
 --- querter of hour/day/week
    "name" INTEGER NOT NULL,
