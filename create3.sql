@@ -29,6 +29,54 @@ CREATE TABLE "main"."units" (
 factor, multiplier
 Multiply by conversion ratio
 
+
+
+CREATE TABLE "main"."grids" (
+    "grid_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "x_start_timepoint_id" INTEGER NOT NULL,
+    "x_stop_timepoint_id" INTEGER NOT NULL,
+    "y_start_timepoint_id" INTEGER NOT NULL,
+    "y_stop_timepoint_id" INTEGER NOT NULL,
+    basic_unit: hour
+);
+
+grids
++ timerange_x
++ timerange_y
+
+siatka tygodnia
+timerange:
+unit_x: day_week
+start_x: 2
+end_x: 1
+-- warunek przeszukiwania ==
+unit_y: week_year
+start_y: 10
+end_y: 14
+
+
+CREATE TABLE "main"."grids" (
+    "grid_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+-- day
+    "x_unit" INTEGER NOT NULL,
+-- 5/7
+    "x_factor" INTEGER NOT NULL,
+-- week
+    "y_unit" INTEGER NOT NULL,
+    "y_start_timepoint_id" INTEGER NOT NULL,
+    "y_stop_timepoint_id" INTEGER NOT NULL,
+    basic_unit: hour
+);
+
+CREATE TABLE "main"."grids_timepoints" (
+    "grid_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    "timepoint_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+
+
+    basic_unit: hour
+);
+
+
 CREATE TABLE "main"."units" (
     "unit_id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     name: workday
@@ -39,6 +87,10 @@ CREATE TABLE "main"."units" (
 
 to_value:
 
+
+rzuty punktow:
+
+grid
 
 -- timepoint resolution
 
