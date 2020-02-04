@@ -15,3 +15,8 @@
 ## Examples
 + tool to test queries
 https://www.sqlitetutorial.net/sqlite-primary-key/
+
+## Usage case
++ licencig 
++ domain
++ period
